@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import App from "../App";
-import Homepage from "../pages/Homepage";
+import Homepage from "../pages/HomePage";
 
 export const RouteHandler = () => {
   const history = createBrowserHistory();

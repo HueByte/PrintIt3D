@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import React, { Children } from "react";
+import React from "react";
 import { Outlet } from "react-router";
 
-function App({ children }) {
+function App() {
   return (
     <div className="App">
       <Outlet />
