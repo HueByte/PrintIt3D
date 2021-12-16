@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/PrintIt3D/static/css/main.4a17e720.css",
-    "main.js": "/PrintIt3D/static/js/main.55d7dd85.js",
+    "main.js": "/PrintIt3D/static/js/main.09f72e0c.js",
     "static/js/787.411578e0.chunk.js": "/PrintIt3D/static/js/787.411578e0.chunk.js",
-    "static/media/logo.svg": "/PrintIt3D/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/PrintIt3D/index.html",
     "main.4a17e720.css.map": "/PrintIt3D/static/css/main.4a17e720.css.map",
-    "main.55d7dd85.js.map": "/PrintIt3D/static/js/main.55d7dd85.js.map",
+    "main.09f72e0c.js.map": "/PrintIt3D/static/js/main.09f72e0c.js.map",
     "787.411578e0.chunk.js.map": "/PrintIt3D/static/js/787.411578e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a17e720.css",
-    "static/js/main.55d7dd85.js"
+    "static/js/main.09f72e0c.js"
   ]
 }
