@@ -43,6 +43,20 @@ main {
   flex-direction: column;
 }
 
+main .heading {
+  width: 100%;
+  margin-top: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main .border-short {
+  width: 20%;
+  border-bottom: 2px solid var(--MediumLight);
+}
+
 main .intro {
   width: 100%;
   background-color: var(--Dark);
@@ -190,6 +204,11 @@ main section .content .usage {
 
 main section .content .usage > * {
   margin: 0 0 0.5em 0;
+}
+
+main section .content .usage .offer {
+  color: rgb(255, 230, 0);
+  font-weight: bold;
 }
 
 main section .content .menu {
