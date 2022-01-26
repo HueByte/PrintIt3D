@@ -1,7 +1,14 @@
-import React from "react";
-import "./HomePage.css";
+import React, { useEffect, useRef } from "react";
+import "./HomePage.scss";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
 
 export const HomePage = () => {
+  useEffect(() => AOS.init());
+
+  const executeScroll = (id) => document.getElementById(id).scrollIntoView();
+
   return (
     <>
       <header>
@@ -9,14 +16,22 @@ export const HomePage = () => {
           <div className="logo">
             <img src={process.env.PUBLIC_URL + "/PrintItText.jpg"} />
           </div>
-          <div className="menu-item">Home</div>
-          <div className="menu-item">Cennik</div>
-          <div className="menu-item">O nas</div>
-          <div className="menu-item">Kontakt</div>
+          <div className="menu-item" onClick={() => executeScroll("home")}>
+            Home
+          </div>
+          <div className="menu-item" onClick={() => executeScroll("aboutus")}>
+            O nas
+          </div>
+          <div className="menu-item" onClick={() => executeScroll("offer")}>
+            Oferta
+          </div>
+          <div className="menu-item" onClick={() => executeScroll("contact")}>
+            Kontakt
+          </div>
         </div>
       </header>
       <main>
-        <div className="intro">
+        <div className="intro" id="home">
           <div className="intro-image">
             <img src={process.env.PUBLIC_URL + "/logo.png"} />
           </div>
@@ -33,7 +48,55 @@ export const HomePage = () => {
             </div>
           </div>
         </div>
-        <section>
+        <section id="aboutus" className="about-us">
+          <div className="about-container">
+            <div className="item">
+              <div className="icon">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </div>
+              <div className="text">
+                <h1>Personel!</h1>
+                Posiadamy Zespół inżynierów,
+                <br />
+                Który zoptymalizuje rozwiązanie Twoich potrzeb.
+              </div>
+            </div>
+            <div className="item">
+              <div className="icon">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+              <div className="text">
+                <h1>Jakość!</h1>
+                Zapewniamy najwyższą jakość
+                <br />
+                oferowanych przez nas produktów.
+              </div>
+            </div>
+            <div className="item">
+              <div className="icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div className="text">
+                <h1>Terminowość!</h1>
+                Gwarantujemy wykonanie
+                <br />
+                Państwa zlecenia zgodnie z ustaleniami czasowymi.
+              </div>
+            </div>
+            <div className="item">
+              <div className="icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <div className="text">
+                <h1>Cena!</h1>
+                Gwarantujemy najwyższy stosunek jakości do ceny.
+                <br />
+                Przekonaj się sam!
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-aos="zoom-in-left">
           <div className="menu-container">
             <div className="option">
               <div className="icon">
@@ -82,7 +145,7 @@ export const HomePage = () => {
             </div>
             <div className="option">
               <div className="icon">
-                <i class="fa fa-bolt" aria-hidden="true"></i>
+                <i class="fa fa-motorcycle" aria-hidden="true"></i>
               </div>
               <div className="description">
                 <h1>Motoryzacja </h1>
@@ -94,16 +157,23 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <div className="heading">
-          <h1>Nasze najpopularniejsze oferty</h1>
+        <div className="heading" id="offer">
+          <h1 style={{ letterSpacing: "0.6px" }}>Nasze oferty</h1>
           <div className="border-short"></div>
-          <p style={{ color: "grey", fontStyle: "italic" }}>
+          <p
+            style={{
+              color: "grey",
+              fontStyle: "italic",
+              textAlign: "center",
+              maxWidth: "1024px",
+            }}
+          >
             Najczęstsze zastosowanie druku 3D. Dowiedz się, w jaki sposób
             wykorzystać potencjał drukowania 3D w prototypowaniu, w produkcji
             narzędzi i przyrządów oraz w produkcji seryjnej.
           </p>
         </div>
-        <section>
+        <section data-aos="fade-left">
           <div className="content-container">
             <div className="content-image">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU15vn8r9bJIOqtjiKsDo_6DoavT-UC_vxgQ&usqp=CAU" />
@@ -139,7 +209,7 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section data-aos="fade-right">
           <div className="content-container">
             <div className="content">
               <div className="header">
@@ -178,30 +248,29 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section data-aos="fade-left">
           <div className="content-container">
             <div className="content-image">
-              <img src="https://i5.walmartimages.com/asr/74c5562e-e4c7-4792-af39-21c6c005e10c.c735bed9976301dc0a02657aa0a5c6f1.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwgiEQG5JJIzQpNDlNBvqQJnFyydoBtLwnPA&usqp=CAU" />
             </div>
             <div className="content">
               <div className="header">
-                <h1>Dorabianie plastikowych części</h1>
+                <h1>Doradztwo</h1>
               </div>
               <div className="text">
-                Świadczymy usługi dorabiania elementów plastikowych w niskich
-                seriach, a nawet pojedynczych sztukach. Zaletą druku 3D jest
-                brak konieczności tworzenia drogiej formy wtryskowej, wystarczy
-                prosty projekt 3D, który dla Ciebie wykonamy. Złamany zawias,
-                uszkodzona zębatka? Uszkodzona plastikowa część, która jest
-                nieosiągalna? Dostarcz nam swój uszkodzony element, a wykonamy
-                dla Ciebie jego zamiennik!
+                Doradztwo w zakresie technologii druku 3D to usługa, w ramach
+                której dobierane są odpowiednie parametry druku i optymalne
+                materiały techniczne. Pierwszym etapem jest identyfikacja
+                potrzeb klienta. Następnie dobierane są odpowiednie materiały i
+                parametry procesu drukowania. Ostatnim etapem jest stworzenie
+                bezpłatnej wyceny usługi druku 3D.
               </div>
               <div className="usage">
-                <h1>Zastosowanie</h1>
+                <h1>Zakres</h1>
                 <ul>
-                  <li>First usage</li>
-                  <li>Second one</li>
-                  <li>Third crazy</li>
+                  <li>Dobór materiałów</li>
+                  <li>Dobór parametrów</li>
+                  <li>Darmowa wycena</li>
                 </ul>
               </div>
               <div className="menu">
@@ -215,7 +284,7 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section data-aos="fade-right">
           <div className="content-container">
             <div className="content">
               <div className="header">
@@ -258,7 +327,7 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className="contact-container" id="contact">
           <div className="content-container">
             <div className="contact">
               <div className="item">
@@ -277,7 +346,7 @@ export const HomePage = () => {
                 <i class="fab fa-instagram"></i> Instagram
               </div>
               <div className="item">
-                <i class="fas fa-phone-alt"></i> +48 500 000 123
+                <i class="fas fa-phone-alt"></i> <span>+48</span> 500 000 123
               </div>
             </div>
           </div>
