@@ -7,7 +7,12 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 export const HomePage = () => {
   useEffect(() => AOS.init());
 
-  const executeScroll = (id) => document.getElementById(id).scrollIntoView();
+  const executeScroll = (id) => {
+    document.getElementById(id).scrollIntoView(true);
+    // let el = document.getElementById(id);
+    // el.scrollIntoView(true);
+    // document.getElementById(id).scrollTop += 64;
+  };
 
   return (
     <>
@@ -20,10 +25,16 @@ export const HomePage = () => {
             Home
           </div>
           <div className="menu-item" onClick={() => executeScroll("aboutus")}>
-            O nas
+            PrintIt3D
           </div>
           <div className="menu-item" onClick={() => executeScroll("offer")}>
             Oferta
+          </div>
+          <div className="menu-item" onClick={() => executeScroll("gallery")}>
+            Galeria
+          </div>
+          <div className="menu-item" onClick={() => executeScroll("pricing")}>
+            Cennik
           </div>
           <div className="menu-item" onClick={() => executeScroll("contact")}>
             Kontakt
@@ -40,10 +51,7 @@ export const HomePage = () => {
               Zespół doświadczonych
               <span style={{ fontWeight: "bolder" }}>inżynierów</span>{" "}
               kontroluje proces druku na każdym etapie, gwarantując najwyższej
-              jakości rezultaty dla Ciebie oraz Twojej firmy. Bez względu na to
-              czy jesteś związany z przemysłem, archeologią, medycyną, reklamą,
-              nauką czy inną branżą wykonamy model dla Twoich potrzeb
-              wykorzystując najnowsze techniki druku 3D.
+              jakości rezultaty dla Ciebie oraz Twojej firmy.
               <p>Ty masz pomysł - my tworzymy jego rozwiązanie!</p>
             </div>
           </div>
@@ -168,9 +176,9 @@ export const HomePage = () => {
               maxWidth: "1024px",
             }}
           >
-            Najczęstsze zastosowanie druku 3D. Dowiedz się, w jaki sposób
-            wykorzystać potencjał drukowania 3D w prototypowaniu, w produkcji
-            narzędzi i przyrządów oraz w produkcji seryjnej.
+            Najczęstsze zastosowanie druku 3D. Sposoby wykorzystania potencjału
+            drukowania 3D w prototypowaniu, w produkcji narzędzi i przyrządów
+            oraz w produkcji seryjnej.
           </p>
         </div>
         <section data-aos="fade-left">
@@ -199,9 +207,9 @@ export const HomePage = () => {
                 </ul>
               </div>
               <div className="menu">
-                <div className="menu-button">
+                {/* <div className="menu-button">
                   <i class="fas fa-tags"></i> Cennik
-                </div>
+                </div> */}
                 <div className="menu-button">
                   <i class="fas fa-info-circle"></i> Dowiedz się więcej
                 </div>
@@ -235,9 +243,9 @@ export const HomePage = () => {
                 </ul>
               </div>
               <div className="menu">
-                <div className="menu-button">
+                {/* <div className="menu-button">
                   <i class="fas fa-tags"></i> Cennik
-                </div>
+                </div> */}
                 <div className="menu-button">
                   <i class="fas fa-info-circle"></i> Dowiedz się więcej
                 </div>
@@ -274,9 +282,9 @@ export const HomePage = () => {
                 </ul>
               </div>
               <div className="menu">
-                <div className="menu-button">
+                {/* <div className="menu-button">
                   <i class="fas fa-tags"></i> Cennik
-                </div>
+                </div> */}
                 <div className="menu-button">
                   <i class="fas fa-info-circle"></i> Dowiedz się więcej
                 </div>
@@ -314,9 +322,9 @@ export const HomePage = () => {
                 </ul>
               </div>
               <div className="menu">
-                <div className="menu-button">
+                {/* <div className="menu-button">
                   <i class="fas fa-tags"></i> Cennik
-                </div>
+                </div> */}
                 <div className="menu-button">
                   <i class="fas fa-info-circle"></i> Dowiedz się więcej
                 </div>
@@ -324,6 +332,61 @@ export const HomePage = () => {
             </div>
             <div className="content-image">
               <img src="https://images.squarespace-cdn.com/content/v1/51b94f0ce4b01efb8e2bde98/1577746381872-VZRQSD81RSZDFKDDSVS1/TPU-rubber-printed-lattice.gif" />
+            </div>
+          </div>
+        </section>
+        <section data-aos="zoom-in" className="gallery" id="gallery">
+          <div className="heading heading-galery">
+            <h1 style={{ letterSpacing: "0.6px" }}>Galeria</h1>
+            <div className="border-short"></div>
+          </div>
+          <div className="pic-grid">
+            <img src={process.env.PUBLIC_URL + "/Assets/szkola4.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/3.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/Image3.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/3D-printing.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/ar2.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/ar1.png"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/2.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/Octopi.jpg"} />
+            <div>&nbsp;</div>
+            <img src={process.env.PUBLIC_URL + "/Assets/IMG_0781.jpg"} />
+            <img src={process.env.PUBLIC_URL + "/Assets/IMG_1635.jpg"} />
+          </div>
+        </section>
+        <section data-aos="fade-left" id="pricing">
+          <div className="content-container">
+            <div className="content-image no-border">
+              <img src="https://static.vecteezy.com/system/resources/previews/002/238/008/non_2x/fixed-cost-or-price-icon-vector.jpg" />
+            </div>
+            <div className="content">
+              <div className="header">
+                <h1>Cennik</h1>
+              </div>
+              <div className="text">
+                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
+                  Nie ma czegoś takiego jak uniwersalny “cennik druku 3D.”
+                  <br />
+                </span>
+                Cena wydruku zależy od wielu czynników, które można modyfikować
+                w celu uzyskania pożądanego rezultatu przy jak najmniejszym
+                koszcie detalu. Cena składa się z dwóch składników: czasu
+                wydruku danego elementu oraz kosztu materiału zużytego na jego
+                wykonanie. Godzina pracy drukarki, przy dostarczeniu przez
+                klienta modeli 3d w formatach: “.stp”, “.stl”, lub “.step.”
+                kosztuje{" "}
+                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
+                  11,50zł/h
+                </span>{" "}
+                netto. Jeżeli detal jest zamawiany wraz z projektowaniem (na
+                podstawie dokumentacji technicznej, bądź gotowego detalu
+                możliwego do zwymiarowania), cena wynosi{" "}
+                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
+                  18zł/h
+                </span>{" "}
+                netto. Przy większych zamówieniach lub stałej współpracy, cena
+                jest ustalana indywidualnie.
+              </div>
             </div>
           </div>
         </section>
