@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PrintIt3D/static/css/main.d6f27b8a.css",
-    "main.js": "/PrintIt3D/static/js/main.9a93c183.js",
+    "main.css": "/PrintIt3D/static/css/main.69a69e79.css",
+    "main.js": "/PrintIt3D/static/js/main.b43214c6.js",
     "static/js/787.411578e0.chunk.js": "/PrintIt3D/static/js/787.411578e0.chunk.js",
     "index.html": "/PrintIt3D/index.html",
-    "main.d6f27b8a.css.map": "/PrintIt3D/static/css/main.d6f27b8a.css.map",
-    "main.9a93c183.js.map": "/PrintIt3D/static/js/main.9a93c183.js.map",
+    "main.69a69e79.css.map": "/PrintIt3D/static/css/main.69a69e79.css.map",
+    "main.b43214c6.js.map": "/PrintIt3D/static/js/main.b43214c6.js.map",
     "787.411578e0.chunk.js.map": "/PrintIt3D/static/js/787.411578e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6f27b8a.css",
-    "static/js/main.9a93c183.js"
+    "static/css/main.69a69e79.css",
+    "static/js/main.b43214c6.js"
   ]
 }
