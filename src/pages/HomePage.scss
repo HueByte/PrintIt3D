@@ -70,11 +70,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
 
-    .border-short {
-      width: 20%;
-      border-bottom: 2px solid var(--MediumLight);
-    }
+  .border-short {
+    width: 20%;
+    border-bottom: 2px solid var(--MediumLight);
   }
 
   .intro {
@@ -237,6 +237,17 @@ main {
       .header {
         font-size: large;
         letter-spacing: 0.6px;
+      }
+
+      .header-pricing {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+        * {
+          text-align: center;
+        }
       }
 
       .text {

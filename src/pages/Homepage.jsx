@@ -278,7 +278,9 @@ export const HomePage = () => {
                 <ul>
                   <li>Dobór materiałów</li>
                   <li>Dobór parametrów</li>
-                  <li>Darmowa wycena</li>
+                  <li>
+                    <span style={{ color: "#F0E68C" }}>Darmowa wycena</span>
+                  </li>
                 </ul>
               </div>
               <div className="menu">
@@ -360,32 +362,20 @@ export const HomePage = () => {
               <img src="https://static.vecteezy.com/system/resources/previews/002/238/008/non_2x/fixed-cost-or-price-icon-vector.jpg" />
             </div>
             <div className="content">
-              <div className="header">
-                <h1>Cennik</h1>
-              </div>
-              <div className="text">
-                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
-                  Nie ma czegoś takiego jak uniwersalny “cennik druku 3D.”
-                  <br />
-                </span>
-                Cena wydruku zależy od wielu czynników, które można modyfikować
-                w celu uzyskania pożądanego rezultatu przy jak najmniejszym
-                koszcie detalu. Cena składa się z dwóch składników: czasu
-                wydruku danego elementu oraz kosztu materiału zużytego na jego
-                wykonanie. Godzina pracy drukarki, przy dostarczeniu przez
-                klienta modeli 3d w formatach: “.stp”, “.stl”, lub “.step.”
-                kosztuje{" "}
-                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
-                  11,50zł/h
-                </span>{" "}
-                netto. Jeżeli detal jest zamawiany wraz z projektowaniem (na
-                podstawie dokumentacji technicznej, bądź gotowego detalu
-                możliwego do zwymiarowania), cena wynosi{" "}
-                <span style={{ color: "var(--Dark)", fontWeight: "bold" }}>
-                  18zł/h
-                </span>{" "}
-                netto. Przy większych zamówieniach lub stałej współpracy, cena
-                jest ustalana indywidualnie.
+              <div className="header header-pricing">
+                <h1>Ceny są ustalamy indywidualnie</h1>
+                <div className="border-short"></div>
+                <h2 style={{ color: "var(--MediumDark)" }}>
+                  Skontaktuj sie z nami!
+                </h2>
+                <i
+                  class="fas fa-arrow-down"
+                  style={{
+                    color: "var(--Dark)",
+                    fontSize: "3em",
+                    marginTop: "0.5em",
+                  }}
+                ></i>
               </div>
             </div>
           </div>
